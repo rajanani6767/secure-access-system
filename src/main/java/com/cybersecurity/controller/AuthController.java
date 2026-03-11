@@ -8,6 +8,7 @@ import com.cybersecurity.service.AuthService;
 
 @RestController
 @RequestMapping("/auth")
+
 public class AuthController {
 
     @Autowired
@@ -21,5 +22,6 @@ public class AuthController {
         String ip = request.getRemoteAddr();
 
         return service.login(username, password, ip);
+        
     }
 }
